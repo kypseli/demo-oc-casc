@@ -23,7 +23,7 @@ unclassified:
     javaOptions: "-XshowSettings:vm -XX:MaxRAMFraction=1 -XX:+AlwaysPreTouch -XX:+UseG1GC\
       \ -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication\
       \ -Dhudson.slaves.NodeProvisioner.initialDelay=0"
-    jenkinsUrl: "http://cjoc.cje.svc.cluster.local/cjoc"
+    jenkinsUrl: "http://cjoc.core-demo.svc.cluster.local/cjoc"
     livenessInitialDelaySeconds: 300
     livenessPeriodSeconds: 10
     livenessTimeoutSeconds: 10
