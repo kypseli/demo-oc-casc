@@ -4,6 +4,9 @@ jenkins:
   - "JNLP4-connect"
   - "OperationsCenter2"
   - "Ping"
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
 unclassified:
   contentFilters:
     enabled: false
@@ -57,7 +60,7 @@ unclassified:
       \ 10px;\n        font-weight: 15pt;\n    }\n  </style>"
     header: |-
       <div id="loginIntro">
-        <h1 id="productName">CloudBees Solution Architects Demo</h1>
+        <h1 id="productName">CloudBees Solution Architects Core Demo</h1>
       </div>
     useDefaultTheme: true 
   operationsCenterSharedConfiguration:
