@@ -4,7 +4,7 @@ jenkins:
       allowsSignup: false
       users:
         - id: admin
-          password: ${admin-pasword}
+          password: ${admin-password}
         - id: beedemo-ops
           password: ${beedemo-ops-password}
         - id: beedemo-dev
