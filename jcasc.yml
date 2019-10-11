@@ -1,4 +1,14 @@
 jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: ${admin-pasword}
+        - id: beedemo-ops
+          password: ${beedemo-ops-password}
+        - id: beedemo-dev
+          password: ${beedemo-dev-password}
   agentProtocols:
   - "Diagnostic-Ping"
   - "JNLP4-connect"
@@ -57,7 +67,7 @@ unclassified:
       \ 10px;\n        font-weight: 15pt;\n    }\n  </style>"
     header: |-
       <div id="loginIntro">
-        <h1 id="productName">CloudBees Solution Architects Core Demo</h1>
+        <h1 id="productName">CloudBees Solution Architects<br>Core Demo</h1>
       </div>
     useDefaultTheme: true 
   operationsCenterSharedConfiguration:
