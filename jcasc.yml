@@ -1,4 +1,15 @@
 jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+      - id: "admin"
+        password: ${admin-password:-passw0rd}
+      - id: "beedemo-dev"
+        password: ${beedemo-dev-password:-passw0rd}
+      - id: "beedemo-ops"
+        password: ${beedemo-ops-password:-passw0rd}
   agentProtocols:
   - "Diagnostic-Ping"
   - "JNLP4-connect"
