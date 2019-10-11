@@ -61,8 +61,6 @@ AuthorizationStrategy authorizationStrategy = jenkins.getAuthorizationStrategy()
 
 String authorizationStrategyBefore = authorizationStrategy.getClass().getName()
 
-if (AuthorizationStrategy.UNSECURED.equals(authorizationStrategy)) {
-
     String ROLE_ADMINISTER = "administer";
     String ROLE_DEVELOP = "developer";
     String ROLE_BROWSE = "browse";
