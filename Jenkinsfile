@@ -1,13 +1,6 @@
 library 'kypseli@master'
-def podYaml = libraryResource 'podtemplates/kubectl.yml'
 pipeline {
-  agent {
-    kubernetes {
-      label 'core-demo-oc-jcasc-update'
-      defaultContainer 'jnlp'
-      yaml podYaml
-    }
-  }
+  agent { label 'default-jnlp' }
   options { 
     buildDiscarder(logRotator(numToKeepStr: '5'))
     preserveStashes(buildCount: 5)
