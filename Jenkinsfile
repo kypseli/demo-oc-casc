@@ -7,7 +7,6 @@ pipeline {
   }
   stages {
     stage('Run Groovy Scripts') {
-      agent { label 'master' }
       when { 
         branch 'master'
       }
