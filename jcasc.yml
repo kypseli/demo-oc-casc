@@ -73,3 +73,11 @@ unclassified:
     useDefaultTheme: true 
   operationsCenterSharedConfiguration:
     enabled: false
+credentials:
+  system:
+    - credentials:
+        - string:
+            scope: GLOBAL
+            id: k8s-sa-core-demo-jenkins
+            description: "k8s-sa-core-demo-jenkins"
+            secret: ${k8s-sa-core-demo-jenkins}  
