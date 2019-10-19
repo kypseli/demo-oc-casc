@@ -77,8 +77,8 @@ credentials:
   system:
     domainCredentials:
     - credentials:
-        - string:
-            scope: GLOBAL
-            id: k8s-sa-core-demo-jenkins
-            description: "k8s-sa-core-demo-jenkins"
-            secret: ${k8s-sa-core-demo-jenkins}  
+      - string:
+          description: "k8s-sa-core-demo-jenkins"
+          id: "k8s-sa-core-demo-jenkins"
+          scope: GLOBAL
+          secret: "${k8s-sa-core-demo-jenkins}"  
