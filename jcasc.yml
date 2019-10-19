@@ -75,6 +75,7 @@ unclassified:
     enabled: false
 credentials:
   system:
+    domainCredentials:
     - credentials:
         - string:
             scope: GLOBAL
