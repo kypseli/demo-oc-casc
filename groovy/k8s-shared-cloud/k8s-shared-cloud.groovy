@@ -33,7 +33,7 @@ def configXml = """
   <snippets>
     <com.cloudbees.opscenter.clouds.kubernetes.KubernetesCloudConfigurationSnippet>
       <value>
-        <string>INSERT_XML</string>
+        <string></string>
       </value>
     </com.cloudbees.opscenter.clouds.kubernetes.KubernetesCloudConfigurationSnippet>
   </snippets>
