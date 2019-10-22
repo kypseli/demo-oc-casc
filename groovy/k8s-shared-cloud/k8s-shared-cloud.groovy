@@ -1,17 +1,13 @@
-import hudson.model.*
 import com.cloudbees.hudson.plugins.folder.*;
-
-import com.cloudbees.opscenter.bluesteel.BlueSteelConstants
-
+import com.cloudbees.opscenter.bluesteel.BlueSteelConstants;
 import jenkins.model.*;
-
-import java.util.logging.Logger
+import java.util.logging.Logger;
 
 Logger logger = Logger.getLogger("k8s-shared-cloud.groovy")
 
 def j = Jenkins.instance
 
-AbstractFolder teamsFolder = j.model.Jenkins.instanceOrNull.getItemByFullName(BlueSteelConstants.CJOC_TEAMS_FOLDER_NAME, AbstractFolder.class)
+def teamsFolder = j.getItemByFullName(BlueSteelConstants.CJOC_TEAMS_FOLDER_NAME)
 if (teamsFolder == null) {
     teamsFolder = j.createProject(Folder.class, BlueSteelConstants.CJOC_TEAMS_FOLDER_NAME);
 }
