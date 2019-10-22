@@ -87,6 +87,8 @@ spec:
   <skipTlsVerify>false</skipTlsVerify>
   <addMasterProxyEnvVars>false</addMasterProxyEnvVars>
   <capOnlyOnAlivePods>false</capOnlyOnAlivePods>
+  <namespace>core-demo</namespace>
+  <credentialsId>k8s-sa-core-demo-jenkins</credentialsId>
   <containerCap>2147483647</containerCap>
   <retentionTimeout>5</retentionTimeout>
   <connectTimeout>0</connectTimeout>
