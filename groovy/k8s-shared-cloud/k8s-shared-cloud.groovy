@@ -1,4 +1,3 @@
-import hudson.*
 import hudson.model.*
 import com.cloudbees.hudson.plugins.folder.*;
 
