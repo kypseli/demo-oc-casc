@@ -33,7 +33,7 @@ def configXml = """
   <snippets>
     <com.cloudbees.opscenter.clouds.kubernetes.KubernetesCloudConfigurationSnippet>
       <value>
-        <string></string>
+        <string>INSERT_ESCAPED_XML</string>
       </value>
     </com.cloudbees.opscenter.clouds.kubernetes.KubernetesCloudConfigurationSnippet>
   </snippets>
