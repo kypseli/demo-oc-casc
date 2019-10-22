@@ -1,6 +1,6 @@
-import hudson.model.*;
-
-import com.cloudbees.hudson.plugins.folder.AbstractFolder
+import hudson.*
+import hudson.model.*
+import com.cloudbees.hudson.plugins.folder.*;
 
 import com.cloudbees.opscenter.bluesteel.BlueSteelConstants
 
@@ -8,7 +8,7 @@ import jenkins.model.*;
 
 import java.util.logging.Logger
 
-Logger logger = Logger.getLogger("init_02_create-eval-job.groovy")
+Logger logger = Logger.getLogger("k8s-shared-cloud.groovy")
 
 def j = Jenkins.instance
 
