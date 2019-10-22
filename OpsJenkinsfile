@@ -16,7 +16,7 @@ pipeline {
         sh("""
           sed -i 's/&/\\&amp;/g; s/</\\&lt;/g; s/>/\\&gt;/g; s/"/\\&quot;/g; s/'"'"'/\\&#39;/g' groovy/k8s-shared-cloud/k8s-cloud.xml
         """)
-        sh("sed -i 's|<string>|r groovy/k8s-shared-cloud/k8s-cloud.xml' groovy/k8s-shared-cloud/k8s-shared-cloud.groovy")
+        sh("sed -i 's@<string>@r groovy/k8s-shared-cloud/k8s-cloud.xml' groovy/k8s-shared-cloud/k8s-shared-cloud.groovy")
         echo "preparing Jenkins CLI"
         sh 'curl -O http://managed-masters-ops.core-demo.svc.cluster.local/managed-masters-ops/jnlpJars/jenkins-cli.jar'
         withCredentials([usernamePassword(credentialsId: 'cli-username-token', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
