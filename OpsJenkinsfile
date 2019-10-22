@@ -15,7 +15,7 @@ pipeline {
         echo "merging k8s cloud xml with groovy"
         script {
           k8sCloudEscapedXml = sh(script: """
-            sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' groovy/k8s-shared-cloud/k8s-cloud.xml
+            sed 's/&/\\&amp;/g; s/</\\&lt;/g; s/>/\\&gt;/g; s/"/\\&quot;/g; s/'"'"'/\\&#39;/g' groovy/k8s-shared-cloud/k8s-cloud.xml
           """, returnStdout: true)
         }
         sh("sed -i 's#INSERT_XML#${k8sCloudEscapedXml}#' groovy/k8s-shared-cloud/k8s-shared-cloud.groovy")
