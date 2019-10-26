@@ -15,7 +15,7 @@
       <activeDeadlineSeconds>180</activeDeadlineSeconds>
       <label>default-jnlp</label>
       <serviceAccount>jenkins</serviceAccount>
-      <nodeSelector>type=agent</nodeSelector>
+      <nodeSelector>type=master</nodeSelector>
       <nodeUsageMode>NORMAL</nodeUsageMode>
       <customWorkspaceVolumeEnabled>false</customWorkspaceVolumeEnabled>
       <workspaceVolume class="org.csanchez.jenkins.plugins.kubernetes.volumes.workspace.EmptyDirWorkspaceVolume">
