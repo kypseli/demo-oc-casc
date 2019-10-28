@@ -68,7 +68,7 @@ spec:
     - /var/jenkins_config/jenkins-agent
     command:
     - /bin/sh
-    image: gcr.io/technologists/k8s-jnlp-agent:0.0.5
+    image: gcr.io/core-workshop/k8s-jnlp-agent@sha256:654081cfd4d9e2a36de1d76f075621d6e07ea9f45a0504ad85a98e8fb7b31da0
     imagePullPolicy: IfNotPresent
     name: jnlp
     resources: {}
