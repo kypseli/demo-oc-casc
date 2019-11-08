@@ -5,11 +5,11 @@ jenkins:
       enableCaptcha: false
       users:
       - id: "admin"
-        password: ${admin-password:-passw0rd}
+        password: ${admin-password}
       - id: "beedemo-dev"
-        password: ${beedemo-dev-password:-passw0rd}
+        password: ${beedemo-dev-password}
       - id: "beedemo-ops"
-        password: ${beedemo-ops-password:-passw0rd}
+        password: ${beedemo-ops-password}
   agentProtocols:
   - "Diagnostic-Ping"
   - "JNLP4-connect"
