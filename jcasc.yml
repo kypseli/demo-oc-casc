@@ -68,7 +68,7 @@ unclassified:
       \ 10px;\n        font-weight: 15pt;\n    }\n  </style>"
     header: |-
       <div id="loginIntro">
-        <h1 id="productName">CloudBees Solution Architects<br>Core Demo</h1>
+        <h1 id="productName">CloudBees Solution Architects<br>Core Preview</h1>
       </div>
     useDefaultTheme: true 
   operationsCenterSharedConfiguration:
