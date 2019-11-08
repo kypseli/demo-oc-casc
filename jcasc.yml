@@ -53,8 +53,7 @@ unclassified:
       \     - name: CASC_JENKINS_CONFIG\n            value: https://raw.githubusercontent.com/kypseli/demo-mm-jcasc/master/jcasc.yml\n\
       \        volumeMounts:\n        - name: mm-secrets\n          mountPath: /var/jenkins_home/mm-secrets\n\
       \          readOnly: true\n      volumes:\n      - name: mm-secrets\n      \
-      \  secret:\n          secretName: mm-secrets\n      nodeSelector:\n        type:\
-      \ master\n      securityContext:\n        runAsUser: 1000\n        fsGroup:\
+      \  secret:\n          secretName: mm-secrets\n      securityContext:\n        runAsUser: 1000\n        fsGroup:\
       \ 1000\n"
   loginTheme:
     footer: "Continuously Learning"
