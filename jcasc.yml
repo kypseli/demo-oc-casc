@@ -20,9 +20,9 @@ unclassified:
     enabled: false
   dockerImageDefinitionConfiguration:
     images:
-    - imageTag: "gcr.io/technologists/cb-core-mm-workshop:2176.43.11"
-      name: "CloudBees Core - Workshop Team Master"
-    - imageTag: "cloudbees/cloudbees-core-mm:2.176.4.3"
+    - imageTag: "gcr.io/core-workshop/cb-core-mm-workshop@sha256:4111d17178b11e2a8ed5ff01caf877cdfe6185fc771900ea046048e38c0d72df"
+      name: "CloudBees Core - SA Managed Master"
+    - imageTag: "cloudbees/cloudbees-core-mm:2.190.2.2"
       name: "CloudBees Official"
   experimentalPlugins:
     enabled: false
@@ -31,7 +31,7 @@ unclassified:
     - id: "default"
       name: "kubernetes"
     cpus: !!int '1.5'
-    disk: 50
+    disk: 30
     fsGroup: "1000"
     javaOptions: "-XshowSettings:vm -XX:MaxRAMFraction=1 -XX:+AlwaysPreTouch -XX:+UseG1GC\
       \ -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication\
@@ -51,7 +51,6 @@ unclassified:
       \          # With the help of SECRETS environment variable\n          # we point\
       \ Jenkins Configuration as Code plugin the location of the secrets\n       \
       \   - name: SECRETS\n            value: /var/jenkins_home/mm-secrets\n     \
-      \     - name: CASC_JENKINS_CONFIG\n            value: https://raw.githubusercontent.com/kypseli/demo-mm-jcasc/master/jcasc.yml\n\
       \        volumeMounts:\n        - name: mm-secrets\n          mountPath: /var/jenkins_home/mm-secrets\n\
       \          readOnly: true\n      volumes:\n      - name: mm-secrets\n      \
       \  secret:\n          secretName: mm-secrets\n      nodeSelector:\n        type:\
