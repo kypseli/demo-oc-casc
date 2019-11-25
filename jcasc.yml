@@ -20,9 +20,9 @@ unclassified:
     enabled: false
   dockerImageDefinitionConfiguration:
     images:
-    - imageTag: "gcr.io/preview-demo/cb-core-mm-workshop@sha256:dd5d9058ade91d211b38caf57d39035b3b5122e7379261b4f319e67f89dcd8e3"
+    - imageTag: "gcr.io/preview-demo/cb-core-mm-workshop@sha256:86691022c7eb5ef41223203de204edb928f6f7ff9cb96014c47645e60ffef917"
       name: "CloudBees Core - Workshop Team Master"
-    - imageTag: "cloudbees/cloudbees-core-mm:2.190.2.2"
+    - imageTag: "cloudbees/cloudbees-core-mm:2.190.3.2"
       name: "CloudBees Official"
   experimentalPlugins:
     enabled: false
