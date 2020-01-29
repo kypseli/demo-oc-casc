@@ -20,7 +20,7 @@ unclassified:
     enabled: false
   dockerImageDefinitionConfiguration:
     images:
-    - imageTag: "gcr.io/core-workshop/cb-core-mm-workshop@sha256:374578181d34b2de17280ee1409045ca42e7a1d8231bc893a83ebabd91a84dbe"
+    - imageTag: "gcr.io/cb-sa-demo/cb-core-mm-workshop@sha256:12bb6b89b26aaf329dd2234471bc280bb149effda8de85c1e502893d638951c5"
       name: "CloudBees Core - SA Managed Master"
     - imageTag: "cloudbees/cloudbees-core-mm:2.190.2.2"
       name: "CloudBees Official"
