@@ -18,44 +18,6 @@ jenkins:
 unclassified:
   contentFilters:
     enabled: false
-  dockerImageDefinitionConfiguration:
-    images:
-    - imageTag: "gcr.io/preview-demo/cb-core-mm-workshop@sha256:09a63a1b286d91978e2c96164cb55ec66cf123b6d4efcbc71cf34e1719ad9812"
-      name: "CloudBees Core - Workshop Team Master"
-    - imageTag: "cloudbees/cloudbees-core-mm:2.204.1.3-alpine"
-      name: "CloudBees Official"
-  experimentalPlugins:
-    enabled: false
-  kubernetesMasterProvisioning:
-    clusterEndpoints:
-    - id: "default"
-      name: "kubernetes"
-      jenkinsUrl: "http://cjoc.core.svc.cluster.local/cjoc"
-    cpus: !!int '1.1'
-    disk: 50
-    fsGroup: "1000"
-    javaOptions: "-XshowSettings:vm -XX:MaxRAMFraction=1 -XX:+AlwaysPreTouch -XX:+UseG1GC\
-      \ -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication\
-      \ -Dhudson.slaves.NodeProvisioner.initialDelay=0"
-    livenessInitialDelaySeconds: 300
-    livenessPeriodSeconds: 10
-    livenessTimeoutSeconds: 10
-    memory: 3072
-    ratio: !!int '0.7'
-    storageClassName: "ssd"
-    terminationGracePeriodSeconds: 1200
-    yaml: "---\nkind: Ingress\nmetadata:\n  annotations:\n    kubernetes.io/ingress.class:\
-      \ \"nginx\"\n    \n---\nkind: StatefulSet\nspec:\n  template:\n    metadata:\n\
-      \      annotations:\n          cluster-autoscaler.kubernetes.io/safe-to-evict:\
-      \ \"false\"\n    spec:\n      containers:\n      - name: jenkins\n        env:\n\
-      \          # With the help of SECRETS environment variable\n          # we point\
-      \ Jenkins Configuration as Code plugin the location of the secrets\n       \
-      \   - name: SECRETS\n            value: /var/jenkins_home/mm-secrets\n     \
-      \     - name: CASC_JENKINS_CONFIG\n            value: https://raw.githubusercontent.com/kypseli/demo-mm-jcasc/master/jcasc.yml\n\
-      \        volumeMounts:\n        - name: mm-secrets\n          mountPath: /var/jenkins_home/mm-secrets\n\
-      \          readOnly: true\n      volumes:\n      - name: mm-secrets\n      \
-      \  secret:\n          secretName: mm-secrets\n      securityContext:\n        runAsUser: 1000\n        fsGroup:\
-      \ 1000\n"
   loginTheme:
     footer: "Continuously Learning"
     head: "  <style>\n    #loginIntroDefault { margin-bottom: 0; }\n    #loginIntroDefault\
@@ -70,8 +32,6 @@ unclassified:
         <h1 id="productName">CloudBees Solution Architects<br>Core Preview</h1>
       </div>
     useDefaultTheme: true 
-  operationsCenterSharedConfiguration:
-    enabled: false
 credentials:
   system:
     domainCredentials:
