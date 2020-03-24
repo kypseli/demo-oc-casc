@@ -37,6 +37,11 @@ credentials:
     domainCredentials:
     - credentials:
       - string:
+          scope: GLOBAL
+          id: cbdays-github-token
+          description: "GitHub PAT for beedemo-ops from JCasC - secret text"
+          secret: ${github-ops-token}
+      - string:
           description: "k8s-sa-core-demo-jenkins"
           id: "k8s-sa-core-demo-jenkins"
           scope: GLOBAL
